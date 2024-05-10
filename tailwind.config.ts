@@ -8,6 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "2rem",
+          sm: "4rem",
+          lg: "8rem",
+          xl: "10rem",
+          "2xl": "20rem",
+        },
+        screens: {
+          "2xl": "1400px",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
