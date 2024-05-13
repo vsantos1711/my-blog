@@ -38,6 +38,7 @@ export default function DynamicLink({ words }: { words: Word[] }) {
         return (
           <motion.a
             href={word.link}
+            tabIndex={currentIndex === index ? 0 : -1}
             key={index}
             target={word.target}
             className="hover:underline px-1 absolute"
