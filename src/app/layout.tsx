@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { fira_code } from "./fonts";
-import { Header } from "@/components/header";
+
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 import "../styles/globals.css";
 
@@ -15,10 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="container my-10 ">
-      <body className={fira_code.className}>
+    <html lang="en" className="container py-10">
+      <body className={fira_code.className + "bg-gray-950"}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
