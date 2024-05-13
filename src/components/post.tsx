@@ -20,7 +20,7 @@ const PostTags = ({ tags }: { tags: string[] }) => {
   return (
     <ul className="flex gap-2">
       {tags.map((tag) => (
-        <li key={tag} className="bg-emerald-500 rounded px-1.5 font-semibold">
+        <li key={tag} className="bg-fuchsia-800 rounded px-1.5 font-semibold">
           {tag}
         </li>
       ))}
@@ -46,7 +46,7 @@ const PostDate = ({ date }: { date: string }) => {
 PostDate.displayName = "PostDate";
 
 const PostReadTime = ({ readTime }: { readTime: string }) => {
-  return <span> • ☕️ {readTime}</span>;
+  return <span> • ☕️ {readTime} de leitura</span>;
 };
 PostReadTime.displayName = "PostReadTime";
 
