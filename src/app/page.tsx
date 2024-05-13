@@ -1,9 +1,24 @@
-import Image from "next/image";
+import Link from "next/link";
+
+import DynamicLink from "@/components/dynamicLink";
+
+import { words } from "@/consts/dynamicLinks";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
-      <h1>Hello from my portfolio</h1>
+    <main className="min-h-screen">
+      <section className="mb-5">
+        <p>
+          Olá, meu nome é Vinícius! <DynamicLink words={words} />
+          <br />
+          <span>
+            Se você é um recrutador, dê uma olhada no meu{" "}
+            <Link href="/cv" className="text-blue-500">
+              currículo
+            </Link>
+          </span>
+        </p>
+      </section>
     </main>
   );
 }
