@@ -6,28 +6,28 @@ import { useState, useEffect } from "react";
 
 import { variants } from "@/consts/animationVariants";
 
-interface Word {
-  word: string;
-  link: string;
+export interface Link {
+  text: string;
+  href: string;
   target?: string;
 }
 
-export default function DynamicLink({ words }: { words: Word[] }) {
+export default function DynamicLink({ links }: { links: Link[] }) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [prevIndex, setPrevIndex] = useState<number>(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setPrevIndex(currentIndex);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % links.length);
     }, 2500);
 
     return () => clearInterval(intervalId);
-  }, [words.length, currentIndex]);
+  }, [links.length, currentIndex]);
 
   return (
     <>
-      {words.map((word, index) => {
+      {links.map((link, index) => {
         const animation =
           index === currentIndex
             ? "active"
@@ -37,16 +37,16 @@ export default function DynamicLink({ words }: { words: Word[] }) {
 
         return (
           <motion.a
-            href={word.link}
+            href={link.href}
             tabIndex={currentIndex === index ? 0 : -1}
             key={index}
-            target={word.target}
-            className="hover:underline px-1 absolute"
+            target={link.target}
+            className="hover:underline px-1 absolute text-sky-500"
             initial={{ opacity: 0, y: 20 }}
             animate={variants[animation]}
             transition={{ duration: 0.3 }}
           >
-            {word.word}.
+            {link.text}.
           </motion.a>
         );
       })}

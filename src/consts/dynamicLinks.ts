@@ -1,20 +1,22 @@
-export const words = [
+import { Link } from "@/components/dynamicLink";
+
+export const links: Link[] = [
   {
-    word: "Eu sou um desenvolvedor fullstack",
-    link: "/about",
+    text: "Eu sou um desenvolvedor fullstack",
+    href: "/about",
     target: "_blank",
   },
   {
-    word: "Construo aplicações escaláveis e performáticas",
-    link: "https://github.com/vsantos1711",
+    text: "Construo aplicações escaláveis e performáticas",
+    href: "https://github.com/vsantos1711",
     target: "_blank",
   },
   {
-    word: "Minha principal stack é o javascript",
-    link: "/projects/javascript",
+    text: "Minha principal stack é o javascript",
+    href: "/projects/javascript",
   },
   {
-    word: "Atualmente estou interessado em Serverless Apps",
-    link: "/projects/serverless",
+    text: "Atualmente estou interessado em Serverless Apps",
+    href: "/projects/serverless",
   },
 ];
