@@ -13,8 +13,8 @@ export default function Home() {
           <br />
           <span>
             Se você é um recrutador, dê uma olhada no meu{" "}
-            <Link href="/cv" className="text-blue-500">
-              currículo
+            <Link href="/cv" className="hover:underline">
+              currículo.
             </Link>
           </span>
         </p>
