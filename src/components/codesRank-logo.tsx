@@ -22,7 +22,7 @@ type LogoProps = ComponentProps<"svg"> & VariantProps<typeof logo>;
 export default function CodesRankLogo({ size, className }: LogoProps) {
   return (
     <Link
-      href="https://github.com/vsantos1711"
+      href="https://profile.codersrank.io/user/vsantos1711"
       target="_blank"
       className="hover:text-stone-100 transition focus:text-stone-100"
     >
