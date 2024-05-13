@@ -36,16 +36,17 @@ export default function DynamicLink({ words }: { words: Word[] }) {
             : "other";
 
         return (
-          <Link href={word.link} key={index} target={word.target}>
-            <motion.span
-              className="hover:underline px-1 absolute"
-              initial={{ opacity: 0, y: 20 }}
-              animate={variants[animation]}
-              transition={{ duration: 0.3 }}
-            >
-              {word.word}.
-            </motion.span>
-          </Link>
+          <motion.a
+            href={word.link}
+            key={index}
+            target={word.target}
+            className="hover:underline px-1 absolute"
+            initial={{ opacity: 0, y: 20 }}
+            animate={variants[animation]}
+            transition={{ duration: 0.3 }}
+          >
+            {word.word}.
+          </motion.a>
         );
       })}
     </>
