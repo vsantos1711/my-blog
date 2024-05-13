@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="container py-10">
-      <body className={fira_code.className + "bg-gray-950"}>
+      <body className={fira_code.className + " bg-slate-900"}>
         <Header />
         {children}
         <Footer />
