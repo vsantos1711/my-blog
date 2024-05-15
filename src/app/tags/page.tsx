@@ -17,7 +17,7 @@ export default async function Tags() {
           <li key={topic.topic} className="mb-1 pl-2">
             <Link href={`/tags/${topic.topic}`}>
               <span className="hover:underline text-lg">
-                {topic.topic} - {topic.count}
+                {topic.topic} ({topic.count})
               </span>
             </Link>
           </li>
