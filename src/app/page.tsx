@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import DynamicLink from "@/components/dynamicLink";
 import {
   PostDate,
@@ -10,12 +9,19 @@ import {
   PostTimeRoot,
   PostTitle,
 } from "@/components/post";
-
 import { links } from "@/consts/dynamicLinks";
+import { filterRepo } from "@/utils/filterRepo";
+import { IRepository } from "@/types";
 
-export default function Home() {
+export default async function Home() {
+  const data = await fetch(
+    "https://api.github.com/users/vsantos1711/repos"
+  ).then((res) => res.json());
+
+  const listOfRepos: IRepository[] = filterRepo(data);
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen ">
       <section className="mb-5">
         <p>
           Olá, meu nome é Vinícius! <DynamicLink links={links} />
@@ -28,15 +34,19 @@ export default function Home() {
           </span>
         </p>
       </section>
-      <PostRoot>
-        <PostTitle title="Título do post" slug="post1" />
-        <PostTags tags={["tag1", "tag2", "tag3"]} />
-        <PostTimeRoot>
-          <PostDate date="2021-09-01T08:30:00Z" />
-          <PostReadTime readTime="5 min" />
-        </PostTimeRoot>
-        <PostDescription description="Descrição do post" />
-      </PostRoot>
+      {listOfRepos.map((repo: IRepository) => {
+        return (
+          <PostRoot key={repo.name}>
+            <PostTitle title={repo.name} slug={repo.name} />
+            <PostTags tags={repo.topics} />
+            <PostTimeRoot>
+              <PostDate date={repo.updated_at} />
+              <PostReadTime readTime="5 min" />
+            </PostTimeRoot>
+            <PostDescription description={repo.description} />
+          </PostRoot>
+        );
+      })}
     </main>
   );
 }
