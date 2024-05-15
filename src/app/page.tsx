@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import DynamicLink from "@/components/dynamicLink";
 import {
   PostDate,
@@ -12,11 +13,10 @@ import {
 import { links } from "@/consts/dynamicLinks";
 import { filterRepo } from "@/utils/filterRepo";
 import { IRepository } from "@/types";
+import getRepositories from "@/api";
 
 export default async function Home() {
-  const data = await fetch(
-    "https://api.github.com/users/vsantos1711/repos"
-  ).then((res) => res.json());
+  const data = await getRepositories("vsantos1711");
 
   const listOfRepos: IRepository[] = filterRepo(data);
 
