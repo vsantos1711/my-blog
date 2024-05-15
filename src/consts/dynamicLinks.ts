@@ -1,6 +1,6 @@
-import { Link } from "@/components/dynamicLink";
+import { ILink } from "@/types";
 
-export const links: Link[] = [
+export const links: ILink[] = [
   {
     text: "Eu sou um desenvolvedor fullstack",
     href: "/about",

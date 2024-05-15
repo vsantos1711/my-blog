@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 import { variants } from "@/consts/animationVariants";
-import { ILink } from "@/consts/dynamicLinks";
+import { ILink } from "@/types";
 
 export default function DynamicLink({ links }: { links: ILink[] }) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [prevIndex, setPrevIndex] = useState<number>(0);
-  const [isAnimating, setIsAnimating] = useState<boolean>(false);
+  const [isAnimating, setIsAnimating] = useState<boolean>(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -21,7 +21,7 @@ export default function DynamicLink({ links }: { links: ILink[] }) {
   }, [links.length, currentIndex]);
 
   return (
-    <span className="  ">
+    <span className="hidden sm:inline ">
       {links.map((link, index) => {
         const animation =
           index === currentIndex
@@ -36,13 +36,18 @@ export default function DynamicLink({ links }: { links: ILink[] }) {
             tabIndex={currentIndex === index ? 0 : -1}
             target={link.target}
             key={index}
-            className={`hover:underline absolute px-1 text-sky-500  `}
+            className="hover:underline absolute px-1 text-sky-500"
             initial={{ opacity: 0, y: 20 }}
             animate={variants[animation]}
             transition={{
               duration: 0.3,
             }}
-            onAnimationComplete={() => setIsAnimating(false)}
+            onAnimationStart={() => {
+              setIsAnimating(true);
+            }}
+            onAnimationComplete={() => {
+              setIsAnimating(false);
+            }}
             hidden={!isAnimating && currentIndex !== index}
           >
             {link.text}.
