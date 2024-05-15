@@ -3,25 +3,30 @@ import React from "react";
 import { ReactNode } from "react";
 
 const PostRoot = ({ children }: { children: ReactNode }) => {
-  return <article>{children}</article>;
+  return <article className="mb-10">{children}</article>;
 };
 PostRoot.displayName = "PostRoot";
 
 const PostTitle = ({ title, slug }: { title: string; slug: string }) => {
   return (
-    <Link href={`/project/${slug}`}>
-      <h2 className="text-3xl font-extrabold mb-1 hover:underline">{title}</h2>
-    </Link>
+    <h2 className="text-3xl font-extrabold mb-1 hover:underline  max-w-fit">
+      <Link href={`/project/${slug}`}>{title}</Link>
+    </h2>
   );
 };
 PostTitle.displayName = "PostTitle";
 
 const PostTags = ({ tags }: { tags: string[] }) => {
   return (
-    <ul className="flex gap-2">
+    <ul className="flex flex-wrap gap-2 mb-1">
       {tags.map((tag) => (
-        <li key={tag} className="bg-fuchsia-800 rounded px-1.5 font-semibold">
-          {tag}
+        <li key={tag}>
+          <Link
+            href={`/tags/${tag}`}
+            className="bg-fuchsia-800 rounded px-1.5 font-semibold"
+          >
+            {tag}
+          </Link>
         </li>
       ))}
     </ul>
