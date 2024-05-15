@@ -9,7 +9,7 @@ PostRoot.displayName = "PostRoot";
 
 const PostTitle = ({ title, slug }: { title: string; slug: string }) => {
   return (
-    <h2 className="text-3xl font-extrabold mb-1 hover:underline  max-w-fit">
+    <h2 className="text-2xl font-extrabold mb-1 hover:underline  max-w-fit">
       <Link href={`/project/${slug}`}>{title}</Link>
     </h2>
   );
@@ -23,7 +23,7 @@ const PostTags = ({ tags }: { tags: string[] }) => {
         <li key={tag}>
           <Link
             href={`/tags/${tag}`}
-            className="bg-fuchsia-800 rounded px-1.5 font-semibold"
+            className="bg-fuchsia-800 rounded px-1.5 font-semibold text-base"
           >
             {tag}
           </Link>

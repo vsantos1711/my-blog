@@ -22,7 +22,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen ">
-      <section className="mb-5">
+      <section className="mb-14">
         <p>
           Olá, meu nome é Vinícius! <DynamicLink links={links} />
           <br />
