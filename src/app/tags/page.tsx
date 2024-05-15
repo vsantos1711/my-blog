@@ -1,6 +1,7 @@
+import Link from "next/link";
+
 import getRepositories from "@/api";
 import { countTopics } from "@/utils/topicCounter";
-import Link from "next/link";
 
 export default async function Tags() {
   const data = await getRepositories("vsantos1711");
