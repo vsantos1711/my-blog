@@ -15,7 +15,7 @@ const config: Config = {
           sm: "4rem",
           lg: "8rem",
           xl: "10rem",
-          "2xl": "20rem",
+          "2xl": "18rem",
         },
         screens: {
           "2xl": "1400px",
