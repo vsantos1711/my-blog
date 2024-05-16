@@ -15,7 +15,7 @@ import { filterRepo } from "@/utils/functions/filterRepo";
 import { IRepository, getRepositories } from "@/api";
 
 export default async function Home() {
-  const data = await getRepositories("vsantos1711");
+  const data = await getRepositories();
 
   const listOfRepos: IRepository[] = filterRepo(data);
 
@@ -23,12 +23,12 @@ export default async function Home() {
     <main className="min-h-screen ">
       <section className="mb-14">
         <p>
-          Olá, meu nome é Vinícius! <DynamicLink links={links} />
+          Hello! My name is Vinícius! <DynamicLink links={links} />
           <br />
           <span>
-            Se você é um recrutador, dê uma olhada no meu{" "}
+            If you are a recruiter take a look at my{" "}
             <Link href="about/cv" className="hover:underline text-sky-500">
-              currículo.
+              CV.
             </Link>
           </span>
         </p>
