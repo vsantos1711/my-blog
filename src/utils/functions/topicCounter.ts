@@ -1,4 +1,4 @@
-import { IRepository } from "@/types";
+import { IRepository } from "@/api";
 
 const ignoredTopics = ["useful", "utilities", "readme-template", "studies"];
 

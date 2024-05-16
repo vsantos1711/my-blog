@@ -12,8 +12,7 @@ import {
 } from "@/components/post";
 import { links } from "@/utils/consts/dynamicLinks";
 import { filterRepo } from "@/utils/functions/filterRepo";
-import { IRepository } from "@/types";
-import getRepositories from "@/api";
+import { IRepository, getRepositories } from "@/api";
 
 export default async function Home() {
   const data = await getRepositories("vsantos1711");

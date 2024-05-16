@@ -1,4 +1,4 @@
-import { IRepository } from "@/types";
+import { IRepository } from "@/api";
 
 // put here the name of repo that you want to remove from list
 export const ignoredRepos = ["vsantos1711", "terraform-studies"];
