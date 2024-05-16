@@ -9,7 +9,8 @@ export interface IRepository {
   topics: string[];
 }
 
-export async function getRepositories(user: string): Promise<IRepository[]> {
+export async function getRepositories(): Promise<IRepository[]> {
+  const user = process.env.GITHUB_USER;
   const data = await fetch(`https://api.github.com/users/${user}/repos`).then(
     (res) => res.json()
   );
