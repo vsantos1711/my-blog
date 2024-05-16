@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">🌊 My portfolio</h1>
 
-## Getting Started
+<p align="center">
+  <i align="center">My personal portfolio/website, directly linked to my GitHub account.</i>
+  <img src="public/assets/project-example.png" />
+</p>
 
-First, run the development server:
+## Project Status
+
+<img src="https://img.shields.io/static/v1?label=STATUS&message=IN%20PROGRESS&color=blue&style=for-the-badge"/>
+ 
+> Since the application is still under development, please note that topics not yet completed will be highlighted with the following symbol: ⚠️
+
+## Description
+
+Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS, specifically designed for developers who want to showcase their work in a dynamic and 100% integrated way with GitHub.
+
+#### Principais características:
+
+- **Direct Connection with GitHub:** All my posts and projects are linked to my GitHub repositories. Any updates made to my repositories will automatically be reflected in the portfolio.
+
+- **Dynamic Portfolio/Blog:** Each repository becomes a post on my portfolio/blog. Information is extracted directly from the README.md files of my repositories, displaying details about projects, challenges, and studies.
+
+- **"About Me" and "CV" Sections:** Includes an "About Me" section where you can learn more about me, and a "CV" section where you can view my skills and experiences!
+
+- **No Database or API:** No database or API needed. All content displayed on the website is hosted directly on GitHub, eliminating the need for additional databases or APIs. Simple and efficient!
+
+## Tools
+
+[<img src="https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />](https://nextjs.org/)
+[<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />](https://www.typescriptlang.org/)
+[<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />](https://tailwindcss.com/)
+[<img src="https://img.shields.io/badge/Vercel-242938?style=for-the-badge&logo=vercel&logoColor=white" />](https://vercel.com/)
+[<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/)
+
+## ⚠️ Usage (in progress)
+
+> We are currently assessing the need for standardizing the README.md files of projects so that they can be read by the application...
+
+To start using our app, you need to make some changes and follow standard README.md formatting, which can be found [here](https://github.com/vsantos1711/useful-things)
+
+## Development
+
+If you like and want to customize your own portfolio, you can run the application locally for code generation purposes or contributions. Follow the steps below to get started:
+
+<details open>
+<summary>
+Pre-requisites
+</summary> <br />
+To be able to start development the application make sure that you have the following pre-requisites installed:
+
+###
+
+- Node.js (versão LTS)
+- Pnpm
+  ```bash
+  npm install -g pnpm
+  ```
+
+##
+
+</details>
+
+<details open>
+<summary>
+Running the app
+</summary> <br />
+
+To setup a local development environment the following steps can be followed:
+
+###
+
+1. Clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/vsantos1711/portfolio.git && cd portfolio && pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Change the env file :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+rename the .evn.example to .env
+change the GITHUB_USER value to your user
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Run the app:
 
-## Learn More
+```bash
+pnpm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+</details>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Licensed under the [MIT license](LICENSE.md).
