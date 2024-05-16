@@ -4,22 +4,22 @@ import { IRepository, getRepositories } from "@/api";
 import { filterRepoByTag } from "@/utils/functions/filterRepo";
 
 export default async function Tag({ params }: { params: { tag: string } }) {
-  const data = await getRepositories("vsantos1711");
+  const data = await getRepositories();
 
   const listOfRepos: IRepository[] = filterRepoByTag(data, params.tag);
 
   return (
     <main className="min-h-screen">
       <h1 className="text-3xl font-extrabold mb-6 max-w-fit">
-        Total de post com a tag{" "}
+        Total of posts tagged with{" "}
         <span className="text-sky-500">{`"${params.tag}"`}</span>:{" "}
         {listOfRepos.length}
       </h1>
 
-      <section className="mb-10">
+      <section className="mb-10 p-2">
         {listOfRepos.map((repo: IRepository) => {
           return (
-            <li key={repo.name} className="mb-1 pl-2">
+            <li key={repo.name}>
               <Link href={`/project/${repo.name}`}>
                 <span className="hover:underline text-lg">{repo.name}</span>
               </Link>
@@ -29,7 +29,7 @@ export default async function Tag({ params }: { params: { tag: string } }) {
       </section>
 
       <Link href="/tags" className="hover:underline">
-        Todas as tags
+        All tags
       </Link>
     </main>
   );
