@@ -10,8 +10,8 @@ import {
   PostTimeRoot,
   PostTitle,
 } from "@/components/post";
-import { links } from "@/consts/dynamicLinks";
-import { filterRepo } from "@/utils/filterRepo";
+import { links } from "@/utils/consts/dynamicLinks";
+import { filterRepo } from "@/utils/functions/filterRepo";
 import { IRepository } from "@/types";
 import getRepositories from "@/api";
 

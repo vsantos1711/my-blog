@@ -1,13 +1,12 @@
 import Link from "next/link";
 
 import getRepositories from "@/api";
-import { countTopics } from "@/utils/topicCounter";
+import { countTopics } from "@/utils/functions/topicCounter";
 
 export default async function Tags() {
   const data = await getRepositories("vsantos1711");
 
   const listOfTopics = countTopics(data);
-  console.log(listOfTopics);
   return (
     <main className="min-h-screen">
       <section className="mb-5">

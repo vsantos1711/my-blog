@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { IRepository } from "@/types";
-import { filterRepoByTag } from "@/utils/filterRepo";
+import { filterRepoByTag } from "@/utils/functions/filterRepo";
 import getRepositories from "@/api";
 
 export default async function Tag({ params }: { params: { tag: string } }) {

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-import { variants } from "@/consts/animationVariants";
+import { variants } from "@/utils/consts/animationVariants";
 import { ILink } from "@/types";
 
 export default function DynamicLink({ links }: { links: ILink[] }) {
