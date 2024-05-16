@@ -2,7 +2,7 @@
 
 <p align="center">
   <i align="center">My personal portfolio/website, directly linked to my GitHub account.</i>
-  <img src="public/assets/project-example.png" />
+  <img src="https://github.com/vsantos1711/portfolio/blob/main/public/assets/project-example.png" />
 </p>
 
 ## Project Status
