@@ -15,7 +15,7 @@
 
 Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS, specifically designed for developers who want to showcase their work in a dynamic and 100% integrated way with GitHub.
 
-#### Principais características:
+#### Main features:
 
 - **Direct Connection with GitHub:** All my posts and projects are linked to my GitHub repositories. Any updates made to my repositories will automatically be reflected in the portfolio.
 
