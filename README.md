@@ -17,9 +17,9 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 
 #### Main features:
 
-- **Direct Connection with GitHub:** All my posts and projects are linked to my GitHub repositories. Any updates made to my repositories will automatically be reflected in the portfolio.
+* **Direct Connection with GitHub:** All my posts and projects are linked to my GitHub repositories. Any updates made to my repositories will automatically be reflected in the portfolio.
 
-- **Dynamic Portfolio/Blog:** Each repository becomes a post on my portfolio/blog. Information is extracted directly from the README.md files of my repositories, displaying details about projects, challenges, and studies.
+* **Dynamic Portfolio/Blog:** Each repository becomes a post on my portfolio/blog. Information is extracted directly from the README.md files of my repositories, displaying details about projects, challenges, and studies.
 
 - **"About Me" and "CV" Sections:** Includes an "About Me" section where you can learn more about me, and a "CV" section where you can view my skills and experiences!
 
