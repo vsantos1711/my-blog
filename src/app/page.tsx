@@ -23,7 +23,11 @@ export default async function Home() {
     <main className="min-h-screen ">
       <section className="mb-14">
         <p>
-          Hello! My name is Vinícius! <DynamicLink links={links} />
+          Hello! My name is{" "}
+          <Link href="/about" className="hover:underline ">
+            Vinícius
+          </Link>
+          ! <DynamicLink links={links} />
           <br />
           <span>
             If you are a recruiter take a look at my{" "}
