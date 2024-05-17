@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 import "../styles/globals.css";
+import "../styles/github-markdown.css";
 
 export const metadata: Metadata = {
   title: "My portfolio",
