@@ -1,3 +1,21 @@
+import { Octokit } from "@octokit/core";
+
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN,
+});
+
+export async function getReadme(slug: string) {
+  const res = await fetch(
+    `https://raw.githubusercontent.com/vsantos1711/${slug}/main/README.md`
+  );
+  const markdown = await res.text();
+
+  const response = await octokit.request("POST /markdown", {
+    text: markdown,
+  });
+  return response.data;
+}
+
 export interface IRepository {
   name: string;
   full_name: string;
@@ -11,9 +29,7 @@ export interface IRepository {
 
 export async function getRepositories(): Promise<IRepository[]> {
   const user = process.env.GITHUB_USER;
-  const data = await fetch(`https://api.github.com/users/${user}/repos`).then(
-    (res) => res.json()
-  );
+  const response = await octokit.request(`GET /users/${user}/repos`);
 
-  return data;
+  return response.data;
 }
