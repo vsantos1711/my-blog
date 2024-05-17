@@ -1,8 +1,8 @@
-<!-- h1 with the repo title -->
+<!-- Title -->
 <h1 align="center">🌊 My portfolio</h1>
 
 <p align="center">
-  <!-- i with a short description abou the app -->
+  <!-- Short description -->
   <i align="center">My personal portfolio/website, directly linked to my GitHub account.</i>
     <!-- img with a printscreen from the project, with the src to 5GITHUB -->
   <img src="https://raw.githubusercontent.com/vsantos1711/portfolio/main/public/assets/project-example.png" />
