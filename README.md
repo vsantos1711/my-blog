@@ -1,7 +1,10 @@
+<!-- Title -->
 <h1 align="center">🌊 My portfolio</h1>
 
 <p align="center">
+  <!-- Short description -->
   <i align="center">My personal portfolio/website, directly linked to my GitHub account.</i>
+    <!-- img with a printscreen from the project, with the src to 5GITHUB -->
   <img src="https://raw.githubusercontent.com/vsantos1711/portfolio/main/public/assets/project-example.png" />
 </p>
 
@@ -32,6 +35,7 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 [<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />](https://tailwindcss.com/)
 [<img src="https://img.shields.io/badge/Vercel-242938?style=for-the-badge&logo=vercel&logoColor=white" />](https://vercel.com/)
 [<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/)
+
 
 ## ⚠️ Usage (in progress)
 
