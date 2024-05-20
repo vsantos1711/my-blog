@@ -1,3 +1,4 @@
+import { writerJSON } from "@/utils/functions/writerJSON";
 import { Octokit } from "@octokit/core";
 
 const octokit = new Octokit({
@@ -9,11 +10,16 @@ export async function getReadme(slug: string) {
     `https://raw.githubusercontent.com/vsantos1711/${slug}/main/README.md`
   );
   const markdown = await res.text();
-
   const response = await octokit.request("POST /markdown", {
     text: markdown,
   });
-  return response.data;
+
+  const markdown_text = markdown.split("\n");
+
+  return {
+    markdown_html: response.data,
+    markdown_text,
+  };
 }
 
 export interface IRepository {
