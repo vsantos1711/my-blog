@@ -33,7 +33,7 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 [<img src="https://img.shields.io/badge/Vercel-242938?style=for-the-badge&logo=vercel&logoColor=white" />](https://vercel.com/)
 [<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/)
 
-## ⚠️ Usage 
+## Usage ⚠️
 
 > We are currently assessing the need for standardizing the README.md files of projects so that they can be read by the application...
 
