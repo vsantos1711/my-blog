@@ -10,7 +10,8 @@
 
 ## Project Status
 <img src="https://img.shields.io/static/v1?label=STATUS&message=IN%20PROGRESS&color=blue&style=for-the-badge"/>
- 
+
+> [!IMPORTANT]
 > Since the application is still under development, please note that topics not yet completed will be highlighted with the following symbol: ⚠️
 
 ## Description
@@ -35,6 +36,7 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 
 ## Usage ⚠️
 
+> [!IMPORTANT]
 > We are currently assessing the need for standardizing the README.md files of projects so that they can be read by the application...
 
 > To start using our app, you need to make some changes and follow standard README.md formatting, which can be found [here](https://github.com/vsantos1711/useful-things)
