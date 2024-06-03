@@ -5,7 +5,7 @@
   <!-- Short description -->
   <i align="center">My personal portfolio/website, directly linked to my GitHub account.</i>
   <!-- Screenshot -->
-  <img src="https://raw.githubusercontent.com/vsantos1711/portfolio/main/public/assets/project-example.png" />
+  <img src="https://github.com/vsantos1711/portfolio/main/public/assets/project-example.png" />
 </p>
 
 ## Project Status
