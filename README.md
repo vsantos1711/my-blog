@@ -11,7 +11,7 @@
 <img src="https://img.shields.io/static/v1?label=STATUS&message=IN%20PROGRESS&color=blue&style=for-the-badge"/>
 
 > [!IMPORTANT]
-> Since the application is still under development, please note that topics not yet completed will be highlighted with the following symbol: ⚠️
+> Since the application is still under development, please note that topics not yet completed will be highlighted by a message like that
 
 ## Description
 Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS, specifically designed for developers who want to showcase their work in a dynamic and 100% integrated way with GitHub.
@@ -33,7 +33,7 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 [<img src="https://img.shields.io/badge/Vercel-242938?style=for-the-badge&logo=vercel&logoColor=white" />](https://vercel.com/)
 [<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/)
 
-## Usage ⚠️
+## Usage
 
 > [!IMPORTANT]
 > We are currently assessing the need for standardizing the README.md files of projects so that they can be read by the application...
