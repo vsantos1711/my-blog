@@ -2,9 +2,10 @@
 <h1> 🌊 My portfolio </h1>
 
 <!-- Short description -->
-<blockquote> My personal portfolio/website, directly linked to my GitHub account.</blockquote>
-<img src="https://raw.githubusercontent.com/vsantos1711/portfolio/main/public/assets/project-example.png" />
-
+<p align="center">
+  <i> My personal portfolio/website, directly linked to my GitHub account. </i>
+  <img src="https://raw.githubusercontent.com/vsantos1711/portfolio/main/public/assets/project-example.png" />
+</p>
 
 ## Project Status
 <img src="https://img.shields.io/static/v1?label=STATUS&message=IN%20PROGRESS&color=blue&style=for-the-badge"/>
