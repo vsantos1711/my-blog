@@ -3,7 +3,8 @@
 ![Frame](https://raw.githubusercontent.com/vsantos1711/portfolio/main/public/assets/project-example.png)
 
 ## Project Status
-<img src="https://img.shields.io/static/v1?label=STATUS&message=IN%20PROGRESS&color=blue&style=for-the-badge"/>
+
+![Status](https://img.shields.io/static/v1?label=STATUS&message=IN%20PROGRESS&color=blue&style=for-the-badge)
 
 > [!IMPORTANT]
 > Since the application is still under development, please note that topics not yet completed will be highlighted by a message like that
