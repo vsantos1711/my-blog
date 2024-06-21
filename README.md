@@ -53,6 +53,7 @@ To be able to start development the application make sure that you have the foll
   ```bash
   npm install -g pnpm
   ```
+  
 ---
 </details>
 
