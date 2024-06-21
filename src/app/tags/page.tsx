@@ -6,14 +6,12 @@ import { filterRepo } from "@/utils/functions/filterRepo";
 
 export default async function Tags() {
   const data = await getRepositories();
-  const listOfRepos: IRepository[] = filterRepo(data);
+  const listOfRepos: IRepository[] = await filterRepo(data);
 
   const listOfTopics = countTopics(listOfRepos);
-
   return (
     <main className="min-h-screen">
       <h1 className="text-3xl font-extrabold mb-6">Tags</h1>
-
       <section className="mb-10 p-2">
         {listOfTopics.map((topic) => (
           <li key={topic.topic}>

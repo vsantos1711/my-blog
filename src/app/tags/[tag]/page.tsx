@@ -6,7 +6,7 @@ import { filterRepoByTag } from "@/utils/functions/filterRepo";
 export default async function Tag({ params }: { params: { tag: string } }) {
   const data = await getRepositories();
 
-  const listOfRepos: IRepository[] = filterRepoByTag(data, params.tag);
+  const listOfRepos: IRepository[] = await filterRepoByTag(data, params.tag);
 
   return (
     <main className="min-h-screen">
