@@ -16,20 +16,17 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 #### Main features:
 
 - **Direct Connection with GitHub:** All my posts and projects are linked to my GitHub repositories. Any updates made to my repositories will automatically be reflected in the portfolio.
-
 - **Dynamic Portfolio/Blog:** Each repository becomes a post on my portfolio/blog. Information is extracted directly from the README.md files of my repositories, displaying details about projects, challenges, and studies.
-
 - **"About Me" and "CV" Sections:** Includes an "About Me" section where you can learn more about me, and a "CV" section where you can view my skills and experiences!
-
 - **No Database or API:** No database or API needed. All content displayed on the website is hosted directly on GitHub, eliminating the need for additional databases or APIs. Simple and efficient!
 
-## Tools
+## Technologies Used
 
-[<img src="https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />](https://nextjs.org/)
-[<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />](https://www.typescriptlang.org/)
-[<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />](https://tailwindcss.com/)
-[<img src="https://img.shields.io/badge/Vercel-242938?style=for-the-badge&logo=vercel&logoColor=white" />](https://vercel.com/)
-[<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/)
+- **[Next.js:](https://nextjs.org/)** The React framework used to build the portfolio, providing server-side rendering and static site generation.
+- **[TypeScript:](https://www.typescriptlang.org/)** The primary programming language for the project, ensuring type safety and enhancing code quality.
+- **[TailwindCSS:](https://tailwindcss.com/)** Utility-first CSS framework used for styling the portfolio quickly and efficiently.
+- **[Vercel:](https://vercel.com/)** Platform used to host the portfolio, providing seamless deployment and serverless functions.
+- **[GitHub:](https://github.com/)** Version control system used to fetch and display data directly from repositories, keeping the portfolio content updated.
 
 ## Usage
 
@@ -37,9 +34,6 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 > We are currently assessing the need for standardizing the README.md files of projects so that they can be read by the application...
 
 > To start using our app, you need to make some changes and follow standard README.md formatting, which can be found [here](https://github.com/vsantos1711/useful-things)
-
-1.
-2.
 
 ## Development
 
@@ -84,6 +78,7 @@ pnpm run dev
 ## To-do
 
 - [ ] Add syntax highlight
+- [ ] Create a global state using [zustand](https://zustand-demo.pmnd.rs/)
 - [ ] Create CV page
 - [ ] Create "About me" page
 - [ ] Add internationalization
