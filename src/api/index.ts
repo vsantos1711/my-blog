@@ -1,25 +1,14 @@
-import { writerJSON } from "@/utils/functions/writerJSON";
 import { Octokit } from "@octokit/core";
 
-const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
-});
+const octokit = new Octokit();
 
 export async function getReadme(slug: string) {
+  const user = process.env.GITHUB_USER;
   const res = await fetch(
-    `https://raw.githubusercontent.com/vsantos1711/${slug}/main/README.md`
+    `https://raw.githubusercontent.com/${user}/${slug}/main/README.md`
   );
   const markdown = await res.text();
-  const response = await octokit.request("POST /markdown", {
-    text: markdown,
-  });
-
-  const markdown_text = markdown.split("\n");
-
-  return {
-    markdown_html: response.data,
-    markdown_text,
-  };
+  return markdown;
 }
 
 export interface IRepository {
@@ -36,6 +25,19 @@ export interface IRepository {
 export async function getRepositories(): Promise<IRepository[]> {
   const user = process.env.GITHUB_USER;
   const response = await octokit.request(`GET /users/${user}/repos`);
+  return response.data;
+}
 
+export interface IUser {
+  login: string;
+  avatar_url: string;
+  name: string;
+  location: string;
+  bio: string;
+}
+
+export async function getUserInfo(): Promise<IUser> {
+  const user = process.env.GITHUB_USER;
+  const response = await octokit.request(`GET /users/${user}`);
   return response.data;
 }
