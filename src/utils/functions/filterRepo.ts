@@ -1,9 +1,11 @@
-import { IRepository } from "@/api";
+import { IRepository, getUserInfo } from "@/api";
 
-// put here the name of repo that you want to remove from list
-export const ignoredRepos = ["vsantos1711", "terraform-studies"];
+export async function filterRepo(repos: IRepository[]) {
+  const user = await getUserInfo();
 
-export function filterRepo(repos: IRepository[]) {
+  // put here the name of repo that you want to remove from list
+  const ignoredRepos = [user.login];
+
   return repos
     .filter((repo: IRepository) => !ignoredRepos.includes(repo.name))
     .sort((a: IRepository, b: IRepository) => {
@@ -13,8 +15,7 @@ export function filterRepo(repos: IRepository[]) {
     });
 }
 
-export function filterRepoByTag(repos: IRepository[], tag: string) {
-  return filterRepo(repos).filter((repo: IRepository) =>
-    repo.topics.includes(tag)
-  );
+export async function filterRepoByTag(repos: IRepository[], tag: string) {
+  const filteredRepos = await filterRepo(repos);
+  return filteredRepos.filter((repo: IRepository) => repo.topics.includes(tag));
 }
