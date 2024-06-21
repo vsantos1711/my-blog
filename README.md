@@ -56,6 +56,8 @@ To be able to start development the application make sure that you have the foll
 
 </details>
 
+---
+
 <details open><summary> Running the app </summary> <br />
 
 To setup a local development environment the following steps can be followed:
