@@ -3,13 +3,13 @@ import React from "react";
 import { ReactNode } from "react";
 
 const PostRoot = ({ children }: { children: ReactNode }) => {
-  return <article className="mb-10">{children}</article>;
+  return <section className="mb-10">{children}</section>;
 };
 PostRoot.displayName = "PostRoot";
 
 const PostTitle = ({ title, slug }: { title: string; slug: string }) => {
   return (
-    <h2 className="text-2xl font-extrabold mb-1 hover:underline  max-w-fit">
+    <h2 className="text-2xl font-extrabold mb-1 hover:underline max-w-fit no-underline text-white">
       <Link href={`/project/${slug}`}>{title}</Link>
     </h2>
   );
@@ -41,7 +41,7 @@ PostTimeRoot.displayName = "PostTimeRoot";
 
 const PostDate = ({ date }: { date: string }) => {
   const dateObject = new Date(date);
-  const formattedDateString = dateObject.toLocaleDateString("pt-BR", {
+  const formattedDateString = dateObject.toLocaleDateString("en-ES", {
     month: "long",
     day: "numeric",
     year: "numeric",
@@ -50,8 +50,8 @@ const PostDate = ({ date }: { date: string }) => {
 };
 PostDate.displayName = "PostDate";
 
-const PostReadTime = ({ readTime }: { readTime: string }) => {
-  return <span> • ☕️ {readTime} de leitura</span>;
+const PostReadTime = ({ readTime }: { readTime: Promise<string> }) => {
+  return <span> • ☕️ {readTime} read</span>;
 };
 PostReadTime.displayName = "PostReadTime";
 

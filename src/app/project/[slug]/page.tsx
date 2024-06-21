@@ -1,18 +1,23 @@
 import { getReadme } from "@/api";
+import Markdown from "markdown-to-jsx";
+import "../../../styles/project.css";
 
 export default async function Project({
   params,
 }: {
   params: { slug: string };
 }) {
-  const res = await getReadme(params.slug);
-  console.log(res);
+  const readme = await getReadme(params.slug);
+
   return (
     <main className="min-h-screen mb-14">
-      <article
-        className=" border rounded-lg border-gray-800 p-4 "
-        dangerouslySetInnerHTML={{ __html: res }}
-      />
+      <Markdown
+        options={{
+          wrapper: "article",
+        }}
+      >
+        {readme}
+      </Markdown>
     </main>
   );
 }
