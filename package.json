@@ -11,7 +11,7 @@
   "dependencies": {
     "@octokit/core": "^6.1.2",
     "framer-motion": "^11.1.9",
-    "github-markdown-css": "^5.5.1",
+    "markdown-to-jsx": "^7.4.7",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
