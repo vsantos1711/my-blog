@@ -48,12 +48,12 @@ If you like and want to customize your own portfolio, you can run the applicatio
 <details open><summary> Pre-requisites </summary> <br />
 To be able to start development the application make sure that you have the following pre-requisites installed:
 
-- Node.js (versão LTS)
 - Pnpm
   ```bash
   npm install -g pnpm
   ```
-  
+- Node.js (versão LTS)
+
 ---
 </details>
 
