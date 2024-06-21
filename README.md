@@ -86,4 +86,4 @@ pnpm run dev
 
 ## License
 
-Licensed under the [MIT license](LICENSE.md).
+Licensed under the [MIT license](https://raw.githubusercontent.com/vsantos1711/portfolio/main/LICENSE.md).
