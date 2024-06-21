@@ -41,16 +41,10 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 
 ## Development
 
-If you like and want to customize your own portfolio, you can run the application locally for code generation purposes or contributions. Follow the steps below to get started:
+If you like and want to customize your own portfolio, you can run the application locally for code generation purposes or contributions. Follow the steps below to get started
 
-<!-- Prerequisites -->
-<details open>
-<summary>
-Pre-requisites
-</summary> <br />
+<details open><summary> Pre-requisites </summary> <br />
 To be able to start development the application make sure that you have the following pre-requisites installed:
-
-###
 
 - Node.js (versão LTS)
 - Pnpm
@@ -58,19 +52,11 @@ To be able to start development the application make sure that you have the foll
   npm install -g pnpm
   ```
 
-##
-
 </details>
 
-<!-- Running the app -->
-<details open>
-<summary>
-Running the app
-</summary> <br />
+<details open><summary> Running the app </summary> <br />
 
 To setup a local development environment the following steps can be followed:
-
-###
 
 1. Clone the repository and install dependencies:
 
@@ -90,8 +76,13 @@ change the GITHUB_USER value to your user
 ```bash
 pnpm run dev
 ```
-
 </details>
+
+
+## To-do
+
+- [ ] Add syntax highlight
+- [ ] Add internationalization
 
 ## License
 
