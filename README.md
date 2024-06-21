@@ -10,9 +10,11 @@
 > Since the application is still under development, please note that topics not yet completed will be highlighted by a message like that
 
 ## Description
+
 Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS, specifically designed for developers who want to showcase their work in a dynamic and 100% integrated way with GitHub.
 
 #### Main features:
+
 - **Direct Connection with GitHub:** All my posts and projects are linked to my GitHub repositories. Any updates made to my repositories will automatically be reflected in the portfolio.
 
 - **Dynamic Portfolio/Blog:** Each repository becomes a post on my portfolio/blog. Information is extracted directly from the README.md files of my repositories, displaying details about projects, challenges, and studies.
@@ -36,7 +38,7 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 
 > To start using our app, you need to make some changes and follow standard README.md formatting, which can be found [here](https://github.com/vsantos1711/useful-things)
 
-1.  
+1.
 2.
 
 ## Development
@@ -76,12 +78,14 @@ change the GITHUB_USER value to your user
 ```bash
 pnpm run dev
 ```
-</details>
 
+</details>
 
 ## To-do
 
 - [ ] Add syntax highlight
+- [ ] Create CV page
+- [ ] Create "About me" page
 - [ ] Add internationalization
 
 ## License
