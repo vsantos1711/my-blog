@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { nunito } from "@/app/fonts";
 
-import GithubLogo from "./github-logo";
-import LinkedInLogo from "./linkedIn-logo";
-import CodesRankLogo from "./codesRank-logo";
+import IconLink from "./SVGIcon";
+import GithubSVG from "../../public/assets/svg/github.svg";
+import LinkedInSVG from "../../public/assets/svg/linkedIn.svg";
+import CodesRankSVG from "../../public/assets/svg/codersRank.svg";
+
 import { getUserInfo } from "@/api";
 
 export default async function Header() {
@@ -22,13 +24,22 @@ export default async function Header() {
         </Link>
         <ul className="flex gap-4">
           <li>
-            <GithubLogo />
+            <IconLink
+              href={`https://github.com/${user.login}`}
+              svg={GithubSVG}
+            />
           </li>
           <li>
-            <LinkedInLogo />
+            <IconLink
+              href={`https://www.linkedin.com/in/${user.login}`}
+              svg={LinkedInSVG}
+            />
           </li>
           <li>
-            <CodesRankLogo />
+            <IconLink
+              href={`https://profile.codersrank.io/user/${user.login}`}
+              svg={CodesRankSVG}
+            />
           </li>
         </ul>
       </nav>
