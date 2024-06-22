@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import DynamicLink from "@/components/dynamicLink";
+import DynamicLink from "@/components/DynamicLink";
 import {
   PostDate,
   PostDescription,
@@ -9,7 +9,7 @@ import {
   PostTags,
   PostTimeRoot,
   PostTitle,
-} from "@/components/post";
+} from "@/components/Post";
 import { links } from "@/utils/consts/dynamicLinks";
 import { filterRepo } from "@/utils/functions/filterRepo";
 import { IRepository, getRepositories, getUserInfo } from "@/api";
