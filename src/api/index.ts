@@ -1,6 +1,8 @@
 import { Octokit } from "@octokit/core";
 
-const octokit = new Octokit();
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN,
+});
 
 export async function getReadme(slug: string) {
   const user = process.env.GITHUB_USER;
