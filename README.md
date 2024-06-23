@@ -83,10 +83,9 @@ pnpm run dev
 
 ## To-do
 
-- [ ] Add syntax highlight
-- [ ] Create a global state using [zustand](https://zustand-demo.pmnd.rs/)
 - [ ] Create CV page
 - [ ] Create "About me" page
+- [ ] Create a global state using [zustand](https://zustand-demo.pmnd.rs/)
 - [ ] Add internationalization
 
 ## License
