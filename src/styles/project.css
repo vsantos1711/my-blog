@@ -26,6 +26,7 @@ article p {
 article summary {
   font-size: 1.125rem;
   font-weight: 700;
+  padding-top: 1rem;
 }
 
 article h1,
@@ -54,7 +55,7 @@ article a {
 
 article ul li {
   position: relative;
-  padding-left: 1rem;
+  padding: 0 0 0.5rem 1rem;
 }
 
 article ul li::before {
@@ -89,4 +90,15 @@ pre code {
   padding: 0;
   color: inherit;
   font-size: inherit;
+}
+
+article blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  border-left: 5px solid #86198f;
+  background-color: #1c1c1c63;
+}
+
+article blockquote p {
+  margin: 0;
 }

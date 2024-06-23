@@ -10,7 +10,9 @@ export async function getReadme(slug: string) {
     `https://raw.githubusercontent.com/${user}/${slug}/main/README.md`
   );
   const markdown = await res.text();
-  return markdown;
+  const modifiedReadme = markdown.replace(/\[!IMPORTANT\]/g, "⚠️");
+
+  return modifiedReadme;
 }
 
 export interface IRepository {

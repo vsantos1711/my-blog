@@ -13,10 +13,10 @@ export const links: ILink[] = [
   },
   {
     text: "My main stack is Javascript",
-    href: "/projects/javascript",
+    href: "/tags/javascript",
   },
   {
     text: "I'm currently interested in Serverless Apps",
-    href: "/projects/serverless",
+    href: "/tags/serverless",
   },
 ];
