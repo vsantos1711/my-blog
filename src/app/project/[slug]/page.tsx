@@ -3,7 +3,6 @@ import Markdown from "markdown-to-jsx";
 import "../../../styles/project.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus as CodeStyle } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { ReactNode } from "react";
 
 export default async function Project({
   params,

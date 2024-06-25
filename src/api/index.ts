@@ -6,8 +6,9 @@ const octokit = new Octokit({
 
 export async function getReadme(slug: string) {
   const user = process.env.GITHUB_USER;
+  const branch = process.env.DEFAULT_BRANCH;
   const res = await fetch(
-    `https://raw.githubusercontent.com/${user}/${slug}/main/README.md`
+    `https://raw.githubusercontent.com/${user}/${slug}/${branch}/README.md`
   );
   const markdown = await res.text();
   const modifiedReadme = markdown.replace(/\[!IMPORTANT\]/g, "⚠️");
