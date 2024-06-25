@@ -5,6 +5,16 @@ article h1 {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 640px) {
+  article h1 {
+    font-size: 1.75rem;
+  }
+
+  article h2 {
+    font-size: 1.2rem;
+  }
+}
+
 article h2 {
   font-size: 1.875rem;
   font-weight: 700;
