@@ -7,8 +7,8 @@ const logo = tv({
   base: "fill-current hover:text-stone-100 transition focus:text-stone-100 fill-current",
   variants: {
     size: {
-      default: "w-9 h-9",
-      sm: "w-8 h-8",
+      default: "sm:w-9 sm:h-9 w-8 h-8",
+      sm: "w-7 h-7",
       xsm: "w-6 h-6",
     },
   },

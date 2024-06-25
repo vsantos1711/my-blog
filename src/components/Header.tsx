@@ -11,8 +11,8 @@ import { getUserInfo } from "@/api";
 export default async function Header() {
   const user = await getUserInfo();
   return (
-    <header className="min-h-20">
-      <nav className="flex items-center gap-5 text-stone-400">
+    <header className="sm:mb-8 mb-4">
+      <nav className="flex items-center sm:gap-5 gap-2 text-stone-400 flex-wrap pb-4">
         <Link
           href="/"
           className={
@@ -22,7 +22,7 @@ export default async function Header() {
         >
           {user.login}
         </Link>
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 flex-wrap ">
           <li>
             <IconLink
               href={`https://github.com/${user.login}`}
