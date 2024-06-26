@@ -5,15 +5,23 @@ const octokit = new Octokit({
 });
 
 export async function getReadme(slug: string) {
-  const user = process.env.GITHUB_USER;
-  const branch = process.env.DEFAULT_BRANCH;
-  const res = await fetch(
-    `https://raw.githubusercontent.com/${user}/${slug}/${branch}/README.md`
-  );
-  const markdown = await res.text();
-  const modifiedReadme = markdown.replace(/\[!IMPORTANT\]/g, "⚠️");
+  try {
+    const user = process.env.GITHUB_USER;
+    const branch = process.env.DEFAULT_BRANCH;
+    const res = await fetch(
+      `https://raw.githubusercontent.com/${user}/${slug}/${branch}/README.md`
+    );
+    if (!res.ok) {
+      return "README not found.";
+    }
+    const markdown = await res.text();
+    const modifiedReadme = markdown.replace(/\[!IMPORTANT\]/g, "⚠️");
 
-  return modifiedReadme;
+    return modifiedReadme;
+  } catch (error) {
+    console.error(`Failed to fetch README: ${error}`);
+    return "Failed to fetch README.";
+  }
 }
 
 export interface IRepository {
@@ -28,9 +36,14 @@ export interface IRepository {
 }
 
 export async function getRepositories(): Promise<IRepository[]> {
-  const user = process.env.GITHUB_USER;
-  const response = await octokit.request(`GET /users/${user}/repos`);
-  return response.data;
+  try {
+    const user = process.env.GITHUB_USER;
+    const response = await octokit.request(`GET /users/${user}/repos`);
+    return response.data;
+  } catch (error) {
+    console.error(`Failed to fetch repositories: ${error}`);
+    return [];
+  }
 }
 
 export interface IUser {
@@ -41,8 +54,22 @@ export interface IUser {
   bio: string;
 }
 
-export async function getUserInfo(): Promise<IUser> {
-  const user = process.env.GITHUB_USER;
-  const response = await octokit.request(`GET /users/${user}`);
-  return response.data;
+export interface ErrorUser {
+  login: string;
+  error: string;
+}
+
+export async function getUserInfo(): Promise<IUser | ErrorUser> {
+  try {
+    const user = process.env.GITHUB_USER;
+    const response = await octokit.request(`GET /users/${user}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Failed to fetch user info: ${error}`);
+    const errorReturn: ErrorUser = {
+      login: "Not Found",
+      error: "Failed to fetch user info.",
+    };
+    return errorReturn;
+  }
 }

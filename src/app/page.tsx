@@ -19,8 +19,17 @@ export default async function Home() {
   const projects = await getRepositories();
   const user = await getUserInfo();
   const listOfProjects: IRepository[] = await filterRepo(projects);
+
+  if ("error" in user) {
+    return (
+      <section className="min-h-screen">
+        <p>{user.error} Try changing the GITHUB_USER on the .env</p>
+      </section>
+    );
+  }
+
   return (
-    <main className="min-h-screen ">
+    <main className="min-h-screen">
       <section className="mb-14">
         <p>
           Hello! My name is{" "}
@@ -37,6 +46,7 @@ export default async function Home() {
           </span>
         </p>
       </section>
+
       {listOfProjects.map((repo: IRepository) => {
         return (
           <PostRoot key={repo.name}>
