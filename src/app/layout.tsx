@@ -4,10 +4,9 @@ import { fira_code } from "./fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-import { useUserStore } from "@/stores/user-store";
-import { getUserInfo } from "@/api/getUser";
-
 import "../styles/globals.css";
+import { useUserStore } from "@/stores/user-store";
+import { getUserInfo, IUser } from "@/api/getUser";
 
 export const metadata: Metadata = {
   title: "My portfolio",
@@ -16,11 +15,17 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   const userData = await getUserInfo();
-  if ("user" in userData) useUserStore.setState({ user: userData.user });
+
+  if ("error" in userData) {
+    console.error("Failed to fetch user info");
+    return <div>Failed to fetch user info</div>;
+  }
+
+  useUserStore.setState({ user: userData.user });
 
   return (
     <html lang="en" className="container py-10">
