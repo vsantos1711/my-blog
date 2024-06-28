@@ -1,6 +1,6 @@
 import { ILink } from "@/types";
 
-export const links: ILink[] = [
+export const defaultLinks: ILink[] = [
   {
     text: "I'm a fullstack developer",
     href: "/about",

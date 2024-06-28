@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ComponentProps } from "react";
 import { tv, VariantProps } from "tailwind-variants";
-import GithubSVG from "./path/to/github.svg";
 
 const logo = tv({
   base: "fill-current hover:text-stone-100 transition focus:text-stone-100 fill-current",

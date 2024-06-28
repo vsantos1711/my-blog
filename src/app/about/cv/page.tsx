@@ -1,3 +1,5 @@
+import { useUserStore } from "@/stores/user-store";
+
 export default function CV() {
   return (
     <main className="min-h-screen">

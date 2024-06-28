@@ -1,4 +1,4 @@
-import { getReadme } from "@/api";
+import { getReadme } from "@/api/getReadme";
 import Markdown from "markdown-to-jsx";
 import "../../../styles/project.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";

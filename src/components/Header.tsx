@@ -6,10 +6,10 @@ import GithubSVG from "../../public/assets/svg/github.svg";
 import LinkedInSVG from "../../public/assets/svg/linkedIn.svg";
 import CodesRankSVG from "../../public/assets/svg/codersRank.svg";
 
-import { getUserInfo } from "@/api";
+import { useUserStore } from "@/stores/user-store";
 
 export default async function Header() {
-  const user = await getUserInfo();
+  const { user } = useUserStore.getState();
   return (
     <header className="sm:mb-8 mb-4">
       <nav className="flex items-center sm:gap-5 gap-2 text-stone-400 flex-wrap pb-4">
@@ -20,24 +20,24 @@ export default async function Header() {
             " text-4xl hover:text-stone-100 transition focus:text-stone-100 text-stone-100"
           }
         >
-          {user.login}
+          {user?.login}
         </Link>
         <ul className="flex gap-4 flex-wrap ">
           <li>
             <IconLink
-              href={`https://github.com/${user.login}`}
+              href={`https://github.com/${user?.login}`}
               svg={GithubSVG}
             />
           </li>
           <li>
             <IconLink
-              href={`https://www.linkedin.com/in/${user.login}`}
+              href={`https://www.linkedin.com/in/${user?.login}`}
               svg={LinkedInSVG}
             />
           </li>
           <li>
             <IconLink
-              href={`https://profile.codersrank.io/user/${user.login}`}
+              href={`https://profile.codersrank.io/user/${user?.login}`}
               svg={CodesRankSVG}
             />
           </li>

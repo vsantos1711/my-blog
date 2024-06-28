@@ -5,8 +5,10 @@ import { useState, useEffect } from "react";
 
 import { variants } from "@/utils/consts/animationVariants";
 import { ILink } from "@/types";
+import { defaultLinks } from "@/utils/consts/dynamicLinks";
 
-export default function DynamicLink({ links }: { links: ILink[] }) {
+export default function DynamicLink() {
+  const links: ILink[] = defaultLinks;
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [prevIndex, setPrevIndex] = useState<number>(0);
   const [isAnimating, setIsAnimating] = useState<boolean>(true);

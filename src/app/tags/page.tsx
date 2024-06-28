@@ -1,14 +1,14 @@
 import Link from "next/link";
 
-import { IRepository, getRepositories } from "@/api";
+import { IRepository, getRepositories } from "@/api/getRepositories";
 import { countTopics } from "@/utils/functions/topicCounter";
-import { filterRepo } from "@/utils/functions/filterRepo";
+import { filterRepositories } from "@/utils/functions/filterRepositories";
 
 export default async function Tags() {
   const data = await getRepositories();
-  const listOfRepos: IRepository[] = await filterRepo(data);
+  const projects: IRepository[] = await filterRepositories(data);
 
-  const listOfTopics = countTopics(listOfRepos);
+  const listOfTopics = countTopics(projects);
   return (
     <main className="min-h-screen">
       <h1 className="text-3xl font-extrabold mb-6">Tags</h1>

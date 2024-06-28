@@ -10,24 +10,16 @@ import {
   PostTimeRoot,
   PostTitle,
 } from "@/components/Post";
-import { links } from "@/utils/consts/dynamicLinks";
-import { filterRepo } from "@/utils/functions/filterRepo";
-import { IRepository, getRepositories, getUserInfo } from "@/api";
-import { getRepoReadTime } from "@/utils/functions/getReadTime";
+
+import { getReadTime } from "@/utils/functions/getReadTime";
+import { useUserStore } from "@/stores/user-store";
+import { IRepository, getRepositories } from "@/api/getRepositories";
+import { getUserInfo } from "@/api/getUser";
 
 export default async function Home() {
   const projects = await getRepositories();
-  const user = await getUserInfo();
-  const listOfProjects: IRepository[] = await filterRepo(projects);
-
-  if ("error" in user) {
-    return (
-      <section className="min-h-screen">
-        <p>{user.error} Try changing the GITHUB_USER on the .env</p>
-      </section>
-    );
-  }
-
+  getUserInfo();
+  const { user } = useUserStore.getState();
   return (
     <main className="min-h-screen">
       <section className="mb-14">
@@ -36,7 +28,7 @@ export default async function Home() {
           <Link href="/about" className="hover:underline ">
             {user.name}
           </Link>
-          ! <DynamicLink links={links} />
+          ! <DynamicLink />
           <br />
           <span>
             If you are a recruiter take a look at my{" "}
@@ -47,16 +39,16 @@ export default async function Home() {
         </p>
       </section>
 
-      {listOfProjects.map((repo: IRepository) => {
+      {projects.map((repository: IRepository) => {
         return (
-          <PostRoot key={repo.name}>
-            <PostTitle title={repo.name} slug={repo.name} />
-            <PostTags tags={repo.topics} />
+          <PostRoot key={repository.name}>
+            <PostTitle title={repository.name} slug={repository.name} />
+            <PostTags tags={repository.topics} />
             <PostTimeRoot>
-              <PostDate date={repo.updated_at} />
-              <PostReadTime readTime={getRepoReadTime(repo.name)} />
+              <PostDate date={repository.updated_at} />
+              <PostReadTime readTime={getReadTime(repository.name)} />
             </PostTimeRoot>
-            <PostDescription description={repo.description} />
+            <PostDescription description={repository.description} />
           </PostRoot>
         );
       })}

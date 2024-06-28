@@ -1,6 +1,6 @@
-import { getReadme } from "@/api";
+import { getReadme } from "@/api/getReadme";
 
-export async function getRepoReadTime(slug: string) {
+export async function getReadTime(slug: string) {
   const postData = await getReadme(slug);
   const time = postData.split(" ").length / 200;
 

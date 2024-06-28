@@ -1,4 +1,4 @@
-import { Inter, Fira_Code, Nunito } from "next/font/google";
+import { Fira_Code, Nunito } from "next/font/google";
 
 export const fira_code = Fira_Code({
   subsets: ["latin"],
