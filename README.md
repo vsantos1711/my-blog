@@ -27,6 +27,7 @@ Welcome to my personal portfolio, a platform built with Next.js and TailwindCSS,
 - **[TailwindCSS:](https://tailwindcss.com/)** Utility-first CSS framework used for styling the portfolio quickly and efficiently.
 - **[Vercel:](https://vercel.com/)** Platform used to host the portfolio, providing seamless deployment and serverless functions.
 - **[GitHub:](https://github.com/)** Version control system used to fetch and display data directly from repositories, keeping the portfolio content updated.
+- **[Zustand:](https://zustand-demo.pmnd.rs/)** A small, fast, and scalable state management library for React applications. It is used to create a global state to manage user information in the app.
 
 ## Usage
 
