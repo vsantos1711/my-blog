@@ -2,9 +2,11 @@ import Link from "next/link";
 
 import { IRepository, getRepositories } from "@/api/getRepositories";
 import { repositoriesByTag } from "@/utils/functions/filterRepositories";
+import { useUserStore } from "@/stores/user-store";
 
 export default async function Tag({ params }: { params: { tag: string } }) {
-  const data = await getRepositories();
+  const user = useUserStore.getState().user;
+  const data = await getRepositories(user?.login);
 
   const projects: IRepository[] = await repositoriesByTag(data, params.tag);
 

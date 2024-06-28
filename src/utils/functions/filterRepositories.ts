@@ -5,7 +5,7 @@ export async function filterRepositories(repos: IRepository[]) {
   const { user } = useUserStore.getState();
 
   // put here the name of repositories that you want to remove from list
-  const ignoredRepos = [user.login];
+  const ignoredRepos = [user?.login];
 
   return repos
     .filter((repo: IRepository) => !ignoredRepos.includes(repo.name))

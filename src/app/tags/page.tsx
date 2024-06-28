@@ -3,9 +3,11 @@ import Link from "next/link";
 import { IRepository, getRepositories } from "@/api/getRepositories";
 import { countTopics } from "@/utils/functions/topicCounter";
 import { filterRepositories } from "@/utils/functions/filterRepositories";
+import { useUserStore } from "@/stores/user-store";
 
 export default async function Tags() {
-  const data = await getRepositories();
+  const user = useUserStore.getState().user;
+  const data = await getRepositories(user?.login);
   const projects: IRepository[] = await filterRepositories(data);
 
   const listOfTopics = countTopics(projects);
