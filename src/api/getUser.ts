@@ -1,4 +1,3 @@
-import { useUserStore } from "@/stores/user-store";
 import { octokit } from ".";
 
 export interface IUser {
@@ -9,12 +8,14 @@ export interface IUser {
   bio: string;
 }
 
-export async function getUserInfo() {
+export async function getUserInfo(): Promise<
+  { user: IUser } | { error: string }
+> {
   try {
     const user = process.env.GITHUB_USER;
     const { data } = await octokit.request(`GET /users/${user}`);
-    useUserStore.setState({ user: data });
-    return useUserStore;
+    // To-do: Add infos from the gist
+    return { user: data };
   } catch (error) {
     console.error(`Failed to fetch user info: ${error}`);
     return {
