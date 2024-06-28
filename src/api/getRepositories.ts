@@ -12,9 +12,12 @@ export interface IRepository {
   topics: string[];
 }
 
-export async function getRepositories(): Promise<IRepository[]> {
+export async function getRepositories(
+  user: string | undefined
+): Promise<IRepository[]> {
   try {
-    const user = process.env.GITHUB_USER;
+    if (!user) throw new Error("User not found.");
+
     const { data } = await octokit.request(`GET /users/${user}/repos`);
     const repos = await filterRepositories(data);
     return repos;

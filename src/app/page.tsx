@@ -14,19 +14,17 @@ import {
 import { getReadTime } from "@/utils/functions/getReadTime";
 import { useUserStore } from "@/stores/user-store";
 import { IRepository, getRepositories } from "@/api/getRepositories";
-import { getUserInfo } from "@/api/getUser";
 
 export default async function Home() {
-  const projects = await getRepositories();
-  getUserInfo();
   const { user } = useUserStore.getState();
+  const projects = await getRepositories(user?.login);
   return (
     <main className="min-h-screen">
       <section className="mb-14">
         <p>
           Hello! My name is{" "}
           <Link href="/about" className="hover:underline ">
-            {user.name}
+            {user?.name}
           </Link>
           ! <DynamicLink />
           <br />
