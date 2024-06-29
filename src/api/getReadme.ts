@@ -5,8 +5,10 @@ export async function getReadme(slug: string) {
     const res = await fetch(
       `https://raw.githubusercontent.com/${user}/${slug}/${branch}/README.md`
     );
-    if (!res.ok) return "README not found.";
-
+    if (!res.ok) {
+      console.error(`Failed to fetch README: ${res.statusText}`);
+      return "README not found.";
+    }
     const markdown = await res.text();
     const modifiedReadme = markdown.replace(/\[!IMPORTANT\]/g, "⚠️");
 
