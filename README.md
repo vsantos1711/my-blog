@@ -22,6 +22,15 @@ Welcome to my personal blog, a platform built with Next.js and TailwindCSS, spec
 
 ## Technologies Used
 
+
+<div align="center">
+  <br/>
+
+  ![Technologies Used](https://skillicons.dev/icons?i=nextjs,typescript,tailwind,vercel,github)
+  <br/>
+</div>
+
+
 - **[Next.js:](https://nextjs.org/)** The React framework used to build the blog, providing server-side rendering and static site generation.
 - **[TypeScript:](https://www.typescriptlang.org/)** The primary programming language for the project, ensuring type safety and enhancing code quality.
 - **[TailwindCSS:](https://tailwindcss.com/)** Utility-first CSS framework used for styling the blog quickly and efficiently.
